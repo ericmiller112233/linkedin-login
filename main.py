@@ -47,6 +47,4 @@ def linkedin_login(user, pw):
     sessionCookies = session.cookies
 
     login_post = session.post(login_post_url, data=raw, cookies=sessionCookies, headers=headers).text
-    print login_post
-    print "^^^ that was the post response"
     soup = BeautifulSoup(login_post)
